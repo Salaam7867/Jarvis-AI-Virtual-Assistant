@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+jarvis_env/
+.env
+*.db
+*.log
