@@ -4,3 +4,4 @@ jarvis_env/
 .env
 *.db
 *.log
+tempCodeRunnerFile.py
