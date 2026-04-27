@@ -1,92 +1,139 @@
-🚀 Jarvis AI Virtual Assistant
-📌 Overview
+# 🚀 Jarvis AI Virtual Assistant
 
-Jarvis is an AI-powered virtual assistant capable of understanding natural language voice commands and executing real-time system automation tasks.
-The system integrates speech recognition, a locally hosted LLM (LLaMA3 via Ollama), and Python-based automation to provide a seamless human-computer interaction experience.
+A voice-controlled AI assistant powered by a local LLM (LLaMA3) for real-time system automation. The system runs locally, ensuring privacy, fast response, and no dependency on external APIs.
 
-Unlike traditional assistants, Jarvis operates without dependency on external APIs, ensuring faster response time, improved privacy, and offline capability.
+---
 
-🎯 Features
-🎤 Voice Command Recognition
-🧠 AI-Based Intent Understanding (LLaMA3 - Ollama)
-💻 Open & Close Desktop Applications
-🔊 Volume Control
-💡 Brightness Control
-📸 Screenshot Capture
-🌐 Web Automation (Google, YouTube)
-🧾 Command Memory System
-🖥️ GUI Interface (Tkinter)
-🔐 Face Authentication (OpenCV)
-🧱 System Architecture
+## 📌 Overview
 
-User Voice Input
-      ↓
-Speech Recognition (SpeechRecognition)
-      ↓
-AI Processing (LLaMA3 via Ollama)
-      ↓
-Intent + Target Extraction
-      ↓
-Automation Module Execution
-      ↓
-Text-to-Speech Output (pyttsx3)
+Jarvis is an AI-based virtual assistant that processes natural language voice commands and performs system-level automation tasks such as opening applications, controlling system settings, and executing user-defined actions.
 
+The system integrates:
+- Speech Recognition
+- Local AI Model (LLaMA3 via Ollama)
+- Automation Module
+- Memory Storage System
 
-⚙️ Technologies Used
-Programming Language: Python
-Speech Recognition: SpeechRecognition
-Text-to-Speech: pyttsx3
-AI Model: LLaMA3 (via Ollama)
-GUI: Tkinter
-Automation: OS, PyAutoGUI
-Face Detection: OpenCV
-Database: SQLite
-📂 Project Structure
+---
+
+## ✨ Features
+
+- 🎤 Voice Command Input
+- 🧠 AI-Based Intent Recognition
+- 💻 Open / Close Desktop Applications
+- 🔊 Volume Control
+- 💡 Brightness Control
+- 📸 Screenshot Capture
+- 🌐 Web Automation (Google / YouTube)
+- 🧾 Memory Storage and Recall
+- 🔐 Face Authentication Login
+
+---
+
+## 🏗️ Project Structure
+
 jarvis_project/
 │
-├── main.py
-├── ai_module.py
-├── automation_module.py
-├── voice_module.py
-├── gui.py
-├── face_auth.py
-├── database.py
-├── README.md
+├── main.py                  # Entry point
+├── gui.py                   # GUI interface
+├── ai_module.py             # AI processing (Ollama)
+├── automation_module.py     # Task execution
+├── voice_module.py          # Speech input/output
+├── database.py              # Memory storage
+├── face_auth.py             # Face authentication
+├── jarvis_env/              # Virtual environment
 └── .gitignore
 
-🚀 How to Run
-1. Clone Repository
-git clone https://github.com/Salaam7867/Jarvis-AI-Virtual-Assistant.git
-cd Jarvis-AI-Virtual-Assistant
-2. Create Virtual Environment
-python -m venv jarvis_env
-jarvis_env\Scripts\activate
-3. Install Dependencies
-pip install -r requirements.txt
+---
 
-(If you don’t have requirements.txt yet — say “make requirements file” and I’ll generate it)
+## ⚙️ Tech Stack
 
-4. Run Ollama (LLaMA3)
-ollama run llama3
-5. Start Application
-python main.py
+- Python
+- SpeechRecognition
+- pyttsx3
+- OpenCV
+- PyAutoGUI
+- Ollama (LLaMA3)
+- Tkinter
 
+---
 
-🧠 Key Highlights
-Fully offline AI assistant
-Uses local LLM instead of cloud APIs
-Dynamic command execution (not hardcoded only)
-Modular architecture for scalability
+## 🚀 Installation
 
-⚠️ Limitations
-Voice recognition accuracy depends on environment noise
-Requires sufficient system resources for LLaMA3
-Limited natural language understanding compared to large cloud models
+1. Clone the repository:
+   git clone https://github.com/Salaam7867/Jarvis-AI-Virtual-Assistant.git
 
-🔮 Future Enhancements
-Email automation (send & summarize emails)
-Mobile application integration
-IoT device control
-Advanced NLP improvements
-Continuous listening optimization
+2. Navigate to project:
+   cd Jarvis-AI-Virtual-Assistant
 
+3. Create virtual environment:
+   python -m venv jarvis_env
+
+4. Activate environment:
+   jarvis_env\Scripts\activate
+
+5. Install dependencies:
+   pip install -r requirements.txt
+
+---
+
+## ▶️ Running the Project
+
+Start Ollama (in a separate terminal):
+   ollama run llama3
+
+Run the assistant:
+   python main.py
+
+---
+
+## 🧪 Example Commands
+
+- "Open Chrome"
+- "Open Calculator"
+- "Increase Volume"
+- "Take Screenshot"
+- "What did I say"
+
+---
+
+## 📸 Output Screenshots
+
+Include:
+- System Initialization
+- Automation Task Execution
+- Memory Retrieval
+
+---
+
+## ⚠️ Limitations
+
+- Requires microphone access
+- Some system commands are OS-dependent
+- Requires Ollama running locally
+
+---
+
+## 🔮 Future Improvements
+
+- Email automation (Gmail integration)
+- WhatsApp messaging automation
+- Smart scheduling system
+- More advanced NLP understanding
+
+---
+
+## 👨‍💻 Authors
+
+- Mohd Abdul Salaam (160322733073)
+- Mohd Abid (160322733061)
+- Mohd Azhar (160322733077)
+- Mohd Saad (160322733088)
+
+Deccan College of Engineering & Technology
+
+---
+
+## 📜 License
+
+This project is developed for academic purposes.
