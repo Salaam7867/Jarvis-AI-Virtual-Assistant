@@ -100,9 +100,11 @@ Run the assistant:
 ## 📸 Output Screenshots
 
 Include:
-- System Initialization
-- Automation Task Execution
-- Memory Retrieval
+<img width="1920" height="1020" alt="Screenshot 2026-04-27 194833" src="https://github.com/user-attachments/assets/52a227dc-c55e-4cf0-ac2b-02f08bdbe4bd" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-04-27 195505" src="https://github.com/user-attachments/assets/ee58eb72-f703-405e-ac30-fa00ed61d1ae" />
+
+<img width="1920" height="1080" alt="Screenshot 2026-04-27 195652" src="https://github.com/user-attachments/assets/e449c813-9a5a-454e-92a5-0aa5d7e7e949" />
 
 ---
 
