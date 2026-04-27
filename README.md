@@ -121,19 +121,3 @@ Include:
 - Smart scheduling system
 - More advanced NLP understanding
 
----
-
-## 👨‍💻 Authors
-
-- Mohd Abdul Salaam (160322733073)
-- Mohd Abid (160322733061)
-- Mohd Azhar (160322733077)
-- Mohd Saad (160322733088)
-
-Deccan College of Engineering & Technology
-
----
-
-## 📜 License
-
-This project is developed for academic purposes.
