@@ -60,7 +60,6 @@ Unlike traditional assistants, Jarvis supports **dual-mode interaction**:
 * Real-time spoken responses
 
 ---
-
 ## 🏗️ Project Structure
 
 ```
