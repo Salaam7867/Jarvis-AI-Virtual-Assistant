@@ -1,45 +1,68 @@
-import requests
+import os
+import re
+from groq import Groq
+from dotenv import load_dotenv
+
+load_dotenv()
+
+client = Groq(api_key=os.getenv("GROQ_API_KEY"))
 
 def get_ai_command(query):
     try:
-        response = requests.post(
-            "http://localhost:11434/api/generate",
-            json={
-                "model": "llama3",
-                "prompt": f"""
-                Extract intent and target.
+        prompt = f"""
+You are an AI assistant.
 
-                Format:
-                action: <action>
-                target: <target>
+Your job:
+1. If the query is a COMMAND → return:
+action: <action>
+target: <target>
 
-                Actions:
-                open_app
-                close_app
-                volume
-                brightness
-                screenshot
-                unknown
+2. If the query is a GENERAL QUESTION → return:
+action: chat
+target: none
+response: <short answer>
 
-                Query: {query}
-                """,
-                "stream": False
-            }
+Rules:
+- No explanation
+- Strict format
+- Only required lines
+
+Examples:
+
+Query: open chrome
+action: open_app
+target: chrome
+
+Query: take screenshot
+action: screenshot
+target: none
+
+Query: who is elon musk
+action: chat
+target: none
+response: Elon Musk is a billionaire entrepreneur and CEO of Tesla and SpaceX.
+
+Query: {query}
+"""
+
+        response = client.chat.completions.create(
+            model="llama-3.1-8b-instant",
+            messages=[{"role": "user", "content": prompt}]
         )
 
-        text = response.json()['response'].lower()
+        text = response.choices[0].message.content.lower()
 
-        action = "unknown"
-        target = ""
+        # 🔥 NEW PARSER
+        action_match = re.search(r'action:\s*(\w+)', text)
+        target_match = re.search(r'target:\s*(\w+)', text)
+        response_match = re.search(r'response:\s*(.+)', text)
 
-        for line in text.split("\n"):
-            if "action" in line:
-                action = line.split(":")[-1].strip()
-            if "target" in line:
-                target = line.split(":")[-1].strip()
+        action = action_match.group(1) if action_match else "unknown"
+        target = target_match.group(1) if target_match else ""
+        reply = response_match.group(1).strip() if response_match else ""
 
-        return action, target
+        return action, target, reply
 
     except Exception as e:
-        print("AI Error:", e)
-        return "unknown", ""
+        print("Groq Error:", e)
+        return "unknown", "", ""

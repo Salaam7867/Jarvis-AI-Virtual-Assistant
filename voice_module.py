@@ -3,12 +3,23 @@ import speech_recognition as sr
 
 # 🔊 Initialize engine ONCE
 engine = pyttsx3.init()
+
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[0].id)  # try 0 or 1
 engine.setProperty('rate', 150)
+engine.setProperty('volume', 1.0)
 
 # ✅ FIXED SPEAK (NO THREADING)
 def speak(text):
     print("Jarvis:", text)
-    engine.stop()  # stop previous speech if any
+
+    engine = pyttsx3.init('sapi5')   # reinitialize every time
+    voices = engine.getProperty('voices')
+    engine.setProperty('voice', voices[0].id)
+
+    engine.setProperty('rate', 150)
+    engine.setProperty('volume', 1.0)
+
     engine.say(text)
     engine.runAndWait()
 

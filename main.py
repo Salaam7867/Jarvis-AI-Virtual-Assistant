@@ -17,6 +17,19 @@ if __name__ == "__main__":
         if not query:
             continue  # skip empty input
 
+        if "exit" in query:
+            speak("Shutting down")
+            break
+
+        # 🧠 Memory
+        if "what did i say" in query:
+            mem = get_memory()
+            speak("You recently said")
+            for m in mem:
+                speak(m)
+            continue
+
+
         store_command(query)
 
         speak("Processing your request")
@@ -28,17 +41,5 @@ if __name__ == "__main__":
             speak(result)
             continue
 
-        # 🧠 Memory Feature
-        if "what did i say" in query:
-            mem = get_memory()
-            speak("You recently said")
-            for m in mem:
-                speak(m)
-            continue
-
-        # ❌ Exit
-        if "exit" in query:
-            speak("Shutting down")
-            break
-
         speak("Sorry, I could not understand")
+        
