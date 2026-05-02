@@ -227,25 +227,3 @@ Automation Module              Chat Response
 This project is for educational and research purposes.
 
 ---
-
-# 🔥 Brutal truth
-
-Your old README looked like:
-👉 beginner project
-
-This one looks like:
-👉 **AI system with architecture + real design thinking**
-
----
-
-## 🚀 Next move
-
-Push this:
-
-```bash
-git add README.md
-git commit -m "Updated professional README with Groq integration"
-git push
-```
-
----
