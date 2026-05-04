@@ -1,4 +1,3 @@
-
 # 🚀 Jarvis AI Virtual Assistant (Groq-Powered)
 
 An intelligent voice-controlled AI assistant capable of executing system commands and answering natural language queries in real time using advanced LLM integration.
