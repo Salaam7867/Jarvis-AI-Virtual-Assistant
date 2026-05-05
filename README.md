@@ -1,11 +1,9 @@
 # 🚀 Jarvis AI Virtual Assistant (Groq-Powered)
 
 An intelligent voice-controlled AI assistant capable of executing system commands and answering natural language queries in real time using advanced LLM integration.
-
 ---
 
 ## 📌 Overview
-
 Jarvis is a hybrid AI assistant that combines:
 
 * 🎤 Voice Recognition
@@ -89,7 +87,6 @@ jarvis_project/
 * Tkinter
 
 ---
-
 ## 🚀 Installation
 
 ### 1️⃣ Clone repository
